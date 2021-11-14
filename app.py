@@ -28,12 +28,12 @@ model = pickle.load(open('model.pkl','rb'))
 from werkzeug.wrappers import Request, Response
 from flask import Flask, render_template, Response, request, redirect, url_for,jsonify     
 from flask_cors import cross_origin
-from firebase import firebase
 import random
 
 # app
 app = Flask(__name__)
 
+@app.route('/')
 # routes
 def home():
     return render_template("index.html")
