@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>BIG BOSS TAMIL</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<style>
+.td
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+<div class="container">
+  <div class="heading">
+    <h1 class="heading__text">WHICH BIG BOSS CONTESTANT ARE YOU?</h1>
+  </div>
+
+  <!-- Quiz section -->
+  <div class="quiz">
+    <div class="quiz__heading">
+      <h2 class="quiz__heading-text">
+        Your are <span class="result"></span> right.
+      </h2>
+    </div>
+<center><h2 class="td" style="margin: 25px 50px 75px 100px;">
+     {{ text }}  
+  </h2><br><br><br><br>
+    <form class="quiz-form" action="/people/" method="post">
+      <div class="quiz-form__quiz">
+        <p class="quiz-form__question">
+          1. How will you react when you are with a new group of people? 
+        </p>
+        <br>
+        <center><img src="/static/website/introvert.jpeg" ></center>
+        <br>
+        <label class="quiz-form__ans" for="q11">
+          <input type="radio" name="q1" id="q11" value="1"/>
+          <span class="design"></span>
+          <span class="text">Irukura edam theriyama irundhutu poiruvom!</span>
+        </label>
+        <label class="quiz-form__ans" for="q12">
+          <input type="radio" name="q1" id="q12" value="2" />
+          <span class="design"></span>
+          <span class="text">Interact if it is needed
+          </span>
+        </label>
+        <label class="quiz-form__ans" for="q13">
+          <input type="radio" name="q1" id="q13" value="3" />
+          <span class="design"></span>
+          <span class="text">Pesuna pesuvom</span>
+        </label>
+        <label class="quiz-form__ans" for="q14">
+          <input type="radio" name="q1" id="q14" value="4" />
+          <span class="design"></span>
+          <span class="text">Interacting with interactive people
+          </span>
+        </label>
+      <label class="quiz-form__ans" for="q15">
+        <input type="radio" name="q1" id="q15" value="5" />
+        <span class="design"></span>
+        <span class="text">Vaanga pazhaguvom</span>
+      </label>
+    </div>
+
+      <div class="quiz-form__quiz">
+        <p class="quiz-form__question">
+          2. How did you spend your time during the pandemic?
+        </p>
+        <br>
+        <center><img src="/static/website/active.jpeg" ></center>
+        <br>
+        <label class="quiz-form__ans" for="q21">
+          <input type="radio" name="q2" id="q21" value="1"/>
+          <span class="design"></span>
+          <span class="text">Eat, sleep, phone, repeat</span>
+        </label>
+        <label class="quiz-form__ans" for="q22">
+          <input type="radio" name="q2" id="q22" value="2" />
+          <span class="design"></span>
+          <span class="text">Last-minute worker</span>
+        </label>
+        <label class="quiz-form__ans" for="q23">
+          <input type="radio" name="q2" id="q23" value="3" />
+          <span class="design"></span>
+          <span class="text">Do works when comfortable</span>
+        </label>
+        <label class="quiz-form__ans" for="q24">
+          <input type="radio" name="q2" id="q24" value="4" />
+          <span class="design"></span>
+          <span class="text">Balancing work and life</span>
+        </label>
+        <label class="quiz-form__ans" for="q25">
+          <input type="radio" name="q2" id="q25" value="5" />
+          <span class="design"></span>
+          <span class="text">Workaholic</span>
+        </label>
+      </div>
+
+      <div class="quiz-form__quiz">
+        <p class="quiz-form__question">
+          3. How funny are you? 
+        </p>
+        <br>
+        <center><img src="/static/website/humour.jpeg" style="max-width: 100%;  
+        height: auto;"></center>
+        <br>
+        <label class="quiz-form__ans" for="q31">
+          <input type="radio" name="q3" id="q31" value="1" />
+          <span class="design"></span>
+          <span class="text">Idhellam oru joke ah bro?</span>
+        </label>
+        <label class="quiz-form__ans" for="q32">
+          <input type="radio" name="q3" id="q32" value="2" />
+          <span class="design"></span>
+          <span class="text">Tries to joke - Palaya joke Thanga Durai
+          </span>
+        </label>
+        <label class="quiz-form__ans" for="q33">
+          <input type="radio" name="q3" id="q33" value="3" />
+          <span class="design"></span>
+          <span class="text">Make mokka jokes - Madura veeran dhaane</span>
+        </label>
+        <label class="quiz-form__ans" for="q34">
+          <input type="radio" name="q3" id="q34" value="4" />
+          <span class="design"></span>
+          <span class="text">Funny with my people </span>
+        </label>
+        <label class="quiz-form__ans" for="q35">
+          <input type="radio" name="q3" id="q35" value="5" />
+          <span class="design"></span>
+          <span class="text">Makes everyone laugh </span>
+        </label>
+      </div>
+
+      <div class="quiz-form__quiz">
+        <p class="quiz-form__question">
+          4. How do you see yourself?
+        </p>
+        <br>
+        <center><img src="/static/website/attractiveness.jpeg" style="max-width: 100%;  
+        height: auto;"></center>
+        <br>
+        <label class="quiz-form__ans" for="q41">
+          <input type="radio" name="q4" id="q41" value="1" />
+          <span class="design"></span>
+          <span class="text">No comments simply waste
+          </span>
+        </label>
+        <label class="quiz-form__ans" for="q42">
+          <input type="radio" name="q4" id="q42" value="2" />
+          <span class="design"></span>
+          <span class="text">Pppahh yarra idhu</span>
+        </label>
+        <label class="quiz-form__ans" for="q43">
+          <input type="radio" name="q4" id="q43" value="3" />
+          <span class="design"></span>
+          <span class="text">Looks good occasionally</span>
+        </label>
+        <label class="quiz-form__ans" for="q44">
+          <input type="radio" name="q4" id="q44" value="4" />
+          <span class="design"></span>
+          <span class="text">People stare at me sometimes</span>
+        </label>
+        <label class="quiz-form__ans" for="q45">
+          <input type="radio" name="q4" id="q45" value="5" />
+          <span class="design"></span>
+          <span class="text">Azhage poramai padum perazhagu</span>
+        </label>
+      </div>
+
+      <div class="quiz-form__quiz">
+        <p class="quiz-form__question">
+          5. How good are you at leading a team? 
+
+        </p>
+        <br>
+        <center><img src="/static/website/leadership.jpeg" ></center>
+        <br>
+        <label class="quiz-form__ans" for="q51">
+          <input type="radio" name="q5" id="q51" value="1"  />
+          <span class="design"></span>
+          <span class="text">Namaku edhuku vambu</span>
+        </label>
+        <label class="quiz-form__ans" for="q52">
+          <input type="radio" name="q5" id="q52" value="2" />
+          <span class="design"></span>
+          <span class="text">Leader for the sake</span>
+        </label>
+        <label class="quiz-form__ans" for="q53">
+          <input type="radio" name="q5" id="q53" value="3" />
+          <span class="design"></span>
+          <span class="text">Would lead if forced</span>
+        </label>
+        <label class="quiz-form__ans" for="q54">
+          <input type="radio" name="q5" id="q54" value="4" />
+          <span class="design"></span>
+          <span class="text">Likes to lead
+          </span>
+        </label>
+        <label class="quiz-form__ans" for="q55">
+          <input type="radio" name="q5" id="q55" value="5" />
+          <span class="design"></span>
+          <span class="text">I’ll always lead
+          </span>
+        </label>
+      </div>
+
+      <div class="quiz-form__quiz">
+        <p class="quiz-form__question">
+          6. What will you do when you are at a marriage dance party?
+
+        </p>
+        <br>
+        <center><img src="/static/website/dance.jpeg" ></center>
+        <br>
+        <label class="quiz-form__ans" for="q61">
+          <input type="radio" name="q6" id="q61" value="1"/>
+          <span class="design"></span>
+          <span class="text">I think I should leave
+          </span>
+        </label>
+        <label class="quiz-form__ans" for="q62">
+          <input type="radio" name="q6" id="q62" value="2" />
+          <span class="design"></span>
+          <span class="text">Summa vedikka papen
+          </span>
+        </label>
+        <label class="quiz-form__ans" for="q63">
+          <input type="radio" name="q6" id="q63" value="3" />
+          <span class="design"></span>
+          <span class="text">Dancing by sitting 
+          </span>
+        </label>
+        <label class="quiz-form__ans" for="q64">
+          <input type="radio" name="q6" id="q64" value="4" />
+          <span class="design"></span>
+          <span class="text">Dancing with my friends in the separate place
+          </span>
+        </label>
+        <label class="quiz-form__ans" for="q65">
+          <input type="radio" name="q6" id="q65" value="5" />
+          <span class="design"></span>
+          <span class="text">Erangi oru kuthattam poduven
+          </span>
+        </label>
+      </div>
+
+      <div class="quiz-form__quiz">
+        <p class="quiz-form__question">
+          7. You are at a party and someone gives a mic to you to sing, what do you do?
+        </p>
+        <br>
+        <center><img src="/static/website/sing.jpeg" style="max-width: 100%;  
+        height: auto;"></center>
+        <br>
+        <label class="quiz-form__ans" for="q71">
+          <input type="radio" name="q7" id="q71" value="1" />
+          <span class="design"></span>
+          <span class="text">Isai mazhaiyil nanaya neengal thaayara</span>
+        </label>
+        <label class="quiz-form__ans" for="q72">
+          <input type="radio" name="q7" id="q72" value="2" />
+          <span class="design"></span>
+          <span class="text">Only humming- Sing in the rain, I am swine in the rain!</span>
+        </label>
+        <label class="quiz-form__ans" for="q73">
+          <input type="radio" name="q7" id="q73" value="3" />
+          <span class="design"></span>
+          <span class="text">Nane oru bathroom singer ngaa</span>
+        </label>
+        <label class="quiz-form__ans" for="q74">
+          <input type="radio" name="q7" id="q74" value="4" />
+          <span class="design"></span>
+          <span class="text">Good singer</span>
+        </label>
+        <label class="quiz-form__ans" for="q75">
+          <input type="radio" name="q7" id="q75" value="5" />
+          <span class="design"></span>
+          <span class="text">Basic ah ve na oru Super singer </span>
+        </label>
+      </div>
+
+      <div class="quiz-form__quiz">
+        <p class="quiz-form__question">
+          8. How will you react when the teacher asks you a question in front of everyone?
+
+        </p>
+        <br>
+        <img src="/static/website/stress.jpeg" style="max-width: 100%;  
+        height: auto;  ">
+        <br>
+        <label class="quiz-form__ans" for="q81">
+          <input type="radio" name="q8" id="q81" value="1" />
+          <span class="design"></span>
+          <span class="text">Venam valikuthu, aluthuruven</span>
+        </label>
+        <label class="quiz-form__ans" for="q82">
+          <input type="radio" name="q8" id="q82" value="2" />
+          <span class="design"></span>
+          <span class="text">Summa nippen</span>
+        </label>
+        <label class="quiz-form__ans" for="q83">
+          <input type="radio" name="q8" id="q83" value="3" />
+          <span class="design"></span>
+          <span class="text">Building strong uh basement weak uh</span>
+        </label>
+        <label class="quiz-form__ans" for="q84">
+          <input type="radio" name="q8" id="q84" value="4" />
+          <span class="design"></span>
+          <span class="text">Edachu solli Samalipom</span>
+        </label>
+        <label class="quiz-form__ans" for="q85">
+          <input type="radio" name="q8" id="q85" value="5" />
+          <span class="design"></span>
+          <span class="text">Arasiyalla ithellam satharanamappa</span>
+        </label>
+      </div>
+
+      <div class="quiz-form__quiz">
+        <p class="quiz-form__question">
+          9. If someone speaks badly about your parama ethiri, what do you do?
+        </p>
+        <br>
+        <center>
+        <img src="/static/website/gossip.jpeg" style="max-width: 100%;  
+        height: auto;  "></center>
+        <br>
+        <label class="quiz-form__ans" for="q91">
+          <input type="radio" name="q9" id="q91" value="1" />
+          <span class="design"></span>
+          <span class="text">Na kanduka maten,avlo worth illa</span>
+        </label>
+        <label class="quiz-form__ans" for="q92">
+          <input type="radio" name="q9" id="q92" value="2" />
+          <span class="design"></span>
+          <span class="text">Entertainment kaaga keppen</span>
+        </label>
+        <label class="quiz-form__ans" for="q93">
+          <input type="radio" name="q9" id="q93" value="3" />
+          <span class="design"></span>
+          <span class="text">Point varatum pesuvom</span>
+        </label>
+        <label class="quiz-form__ans" for="q94">
+          <input type="radio" name="q9" id="q94" value="4" />
+          <span class="design"></span>
+          <span class="text">Pesa arambichen! Pesa arambichen! Chennai airport vara pesuven</span>
+        </label>
+        <label class="quiz-form__ans" for="q95">
+          <input type="radio" name="q9" id="q95" value="5" />
+          <span class="design"></span>
+          <span class="text">Vechu senjuruven</span>
+        </label>
+      </div>
+
+      <div class="quiz-form__quiz">
+        <p class="quiz-form__question">
+          10. How likely are you influenced by others? 
+        </p>
+        <br>
+        <img src="/static/website/influence.jpeg" style="max-width: 100%;  
+        height: auto;  ">
+        <br>
+        <label class="quiz-form__ans" for="q101">
+          <input type="radio" name="q10" id="q101" value="1" />
+          <span class="design"></span>
+          <span class="text">No one can influence me</span>
+        </label>
+        <label class="quiz-form__ans" for="q102">
+          <input type="radio" name="q10" id="q102" value="2" />
+          <span class="design"></span>
+          <span class="text">Influenced by my favorite people</span>
+        </label>
+        <label class="quiz-form__ans" for="q103">
+          <input type="radio" name="q10" id="q103" value="3" />
+          <span class="design"></span>
+          <span class="text">Depending on the circumstances</span>
+        </label>
+        <label class="quiz-form__ans" for="q104">
+          <input type="radio" name="q10" id="q104" value="4" />
+          <span class="design"></span>
+          <span class="text">Get influenced without knowing</span>
+        </label>
+        <label class="quiz-form__ans" for="q105">
+          <input type="radio" name="q10" id="q105" value="5" />
+          <span class="design"></span>
+          <span class="text">Easily influential</span>
+        </label>
+      </div>
+
+      <div class="quiz-form__quiz">
+        <p class="quiz-form__question">
+          11. How will you be when you fail in one of the exams? 
+        </p>
+        <br>
+        <center><img src="/static/website/optimistic.jpeg" ></center>
+        <br>
+        <label class="quiz-form__ans" for="q111">
+          <input type="radio" name="q11" id="q111" value="1"/>
+          <span class="design"></span>
+          <span class="text">Vazhkaiya theadi nanum poren...</span>
+        </label>
+        <label class="quiz-form__ans" for="q112">
+          <input type="radio" name="q11" id="q112" value="2" />
+          <span class="design"></span>
+          <span class="text">Life is full of problems and pain
+          </span>
+        </label>
+        <label class="quiz-form__ans" for="q113">
+          <input type="radio" name="q11" id="q113" value="3" />
+          <span class="design"></span>
+          <span class="text">Just thinking to study for the next exam
+          </span>
+        </label>
+        <label class="quiz-form__ans" for="q114">
+          <input type="radio" name="q11" id="q114" value="4" />
+          <span class="design"></span>
+          <span class="text">Study properly for the next exam
+          </span>
+        </label>
+        <label class="quiz-form__ans" for="q115">
+          <input type="radio" name="q11" id="q115" value="5" />
+          <span class="design"></span>
+          <span class="text">Life is full of surprises and miracles
+          </span>
+        </label>
+      </div>
+
+      <input class="submit" type="submit" value="Submit" />
+        
+   </form>
+    
+  </div>
+</div>
+<!-- partial -->
+  <script  src="{{url_for('static', filename='script.js')}}}"></script>
+</body>
+</html>
